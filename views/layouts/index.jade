@@ -1,0 +1,9 @@
+extends ../app.jade
+block content
+	h1 My app
+	div(class="container")
+		div(id="messages")
+		form(onsubmit="return addMessage(this)")
+			input(type="text" placeholder="author" id="author")
+			input(type="text" placeholder="message" id="message")
+			input(type="submit" value="Enviar")

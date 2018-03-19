@@ -9,15 +9,16 @@ var messages=[{
 	'message' : 'Hola, primer mensaje',
 	'author'  : 'reinaldoagf'
 }]
-
-app.use(express.static('public'))
+//Enviando motor de plantilla jade
+app.set('view engine','jade')
+app.use('/static', express.static('public'))
 app.get('/',function(req,res){
 	res.status(200)
-	res.send('Hello world, remote client')
+	res.render('layouts/index')
 })
 app.get('/admin',function(req,res){
 	res.status(200)
-	res.send('Hello world, remote administrator')
+	res.render('admin/admin')
 })
 //Prueba de socket.io
 io.on('connection',function(socket){

@@ -1,0 +1,15 @@
+doctype html
+html(lang="es")
+	head
+		title Remote Admin
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	body
+		block content
+		block scripts
+			script(src="/jquery/jquery.js")
+			script(src="/socket.io/socket.io.js")
+			script(src="/static/js/main.js")
+		block extra-scripts
+			script(src="/static/js/ajax.js" data-main="/static/js/ajax" type="text/javascript")
