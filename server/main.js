@@ -23,11 +23,14 @@ app.get('/admin',function(req,res){
 //Prueba de socket.io
 io.on('connection',function(socket){
 	console.log('Alguien se ha conectado con socket')
-	socket.emit('messages',messages)
-	socket.on('chat-message',function(data){
-		messages.push(data)
-		io.sockets.emit('messages',messages)
+	socket.on('mousemove',function(data){
+		console.log(data)
 	})
+	// socket.emit('messages',messages)
+	// socket.on('chat-message',function(data){
+	// 	messages.push(data)
+	// 	io.sockets.emit('messages',messages)
+	// })
 })
 
 server.listen(8080,function(){
