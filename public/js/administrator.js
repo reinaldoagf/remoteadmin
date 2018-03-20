@@ -2,8 +2,8 @@ var socket = io.connect("http://localhost:8080/", {"forceNew":true})
 var lastEmit = $.now();
 $(document).ready(function(){
    	$(document).mousemove(function(event){
-    	console.log("Coordenadas en del ratón en la parte visible del navegador: " + event.clientX + ", " + event.clientY);
-    	console.log("Coordenadas absolutas del ratón en la página actual: " + event.pageX + ", " + event.pageY);
+    	//console.log("Coordenadas en del ratón en la parte visible del navegador: " + event.clientX + ", " + event.clientY);
+    	//console.log("Coordenadas absolutas del ratón en la página actual: " + event.pageX + ", " + event.pageY);
    		var payload={
    			'id':1,
    			'ejeX':event.clientX,
@@ -12,6 +12,10 @@ $(document).ready(function(){
    		socket.emit('mousemove',payload)
    	})
 })
+$('#btnAlert').click(function(){
+  socket.emit('btnAlert')
+  console.log('emited')
+});
 //Escucha evento proveniente del servidor
 // socket.on('messages',function(data){
 // 	console.log(data)
