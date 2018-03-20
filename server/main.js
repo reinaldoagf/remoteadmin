@@ -24,7 +24,10 @@ app.get('/admin',function(req,res){
 io.on('connection',function(socket){
 	console.log('Alguien se ha conectado con socket')
 	socket.on('mousemove',function(data){
-		console.log(data)
+		console.log('X recibido '+data.ejeX+' Y recibido '+data.ejeY)
+		//Movimiento del mouse emitido por el administrador
+		// socket.emit('mousemove-issued',data)
+		io.sockets.emit('mousemove-issued',data)
 	})
 	// socket.emit('messages',messages)
 	// socket.on('chat-message',function(data){

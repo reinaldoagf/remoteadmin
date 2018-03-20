@@ -5,6 +5,7 @@ $(document).ready(function(){
     	console.log("Coordenadas en del ratón en la parte visible del navegador: " + event.clientX + ", " + event.clientY);
     	console.log("Coordenadas absolutas del ratón en la página actual: " + event.pageX + ", " + event.pageY);
    		var payload={
+   			'id':1,
    			'ejeX':event.clientX,
    			'ejeY':event.clientY
    		}

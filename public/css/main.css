@@ -1,0 +1,9 @@
+#cursors{
+  position:relative;
+}
+.cursor{
+  position:absolute;
+  width:15px;
+  height:22px;
+  background:url('../images/pointer.png') no-repeat -4px 0;	
+}
