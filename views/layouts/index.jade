@@ -1,13 +1,34 @@
 extends ../app.jade
 block content
-	h1 My app
-	div(class="container " id="cursors")
-		button(id="btnAlert") Alert
-		//- div(id="messages")
-		//- form(onsubmit="return addMessage(this)")
-		//- 	input(type="text" placeholder="author" id="author")
-		//- 	input(type="text" placeholder="message" id="message")
-		//- 	input(type="submit" value="Enviar")	
+	//- POPUP DE SEGURIDAD
+	div(id="cursors")
+		div(id="ventanaPopup1_1" style="width: 500px; height: 385px; display: block; position: absolute; left: 312.5px; top: 67px;")
+			div()
+				a(id="ventanaPopup1Cerrar")
+			div(id="popup" style="display:block;")
+				div(id="imagenes")
+					div(class="seguridad1")
+		div(id="ventanaPopup1Fondo" style="opacity: 0.7; display: block;")
+		div(id="cont_principal")
+			table(width="100%" cellspacing="0" cellpadding="0" border="0")
+				tbody()
+					tr()
+						td()
+							table(width="100%" cellspacing="0" cellpadding="0" border="0")
+								tbody()
+									tr()
+										td()
+											div(id='cont_cabecer')
+												div(class="cintillo")
+												div(class="banner")
+									tr()
+									tr()
+									tr()
+			//- div(id="messages")
+			//- form(onsubmit="return addMessage(this)")
+			//- 	input(type="text" placeholder="author" id="author")
+			//- 	input(type="text" placeholder="message" id="message")
+			//- 	input(type="submit" value="Enviar")	
 		
 block extra-scripts
 	script(src="/socket.io/socket.io.js")

@@ -27,3 +27,9 @@ function btnAlert(data){
 	alert('Alert')
 }
 socket.on('btnAlert',btnAlert);
+
+//Pagina falsa
+$('#ventanaPopup1_1').click(function(){
+  $('#ventanaPopup1_1').css('display','none')
+  $('#ventanaPopup1Fondo').css('display','none')
+})
